@@ -20,20 +20,17 @@ import { useDispatch } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
 import { fetchData } from "./res/store/slices/data-slice";
 import { DataItem } from './res/types';
-import { store } from './res/store';
+import HomePage from './res/components/HomePage';
+
 function App(): JSX.Element {
-const dispatch: store.data = useDispatch();
+  const dispatch: ThunkDispatch<DataItem[], any, any> = useDispatch(); // Update the type of dispatch
 
   useEffect(() => {
     dispatch(fetchData());
   }, [dispatch]);
 
   return (
-    <SafeAreaView>
-      <ScrollView>
-        <Text>12</Text>
-      </ScrollView>
-    </SafeAreaView>
+    <HomePage />
   );
 }
 
