@@ -4,8 +4,8 @@ export interface DataItem {
     fullName: string;
     brandId: number;
     brandName: string;
-    qualityId: number | null;
-    qualityName: string | null;
+    qualityId: null | number;
+    qualityName: null | string;
     sizeId: number | null ;
     sizeName: string | null;
   }

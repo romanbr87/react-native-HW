@@ -30,7 +30,11 @@ function App(): JSX.Element {
   }, [dispatch]);
 
   return (
-    <HomePage />
+    <View style={{flex: 1}}>
+      <View style={{flex: 1, backgroundColor: 'rgb(225,225,225)'}}>
+        <HomePage />
+      </View>
+    </View>
   );
 }
 
